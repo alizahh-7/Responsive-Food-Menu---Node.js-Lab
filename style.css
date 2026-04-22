@@ -1,0 +1,312 @@
+/* ========================
+   RESET & BASE
+======================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: #f5f0eb;
+  color: #1a1a1a;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ========================
+   NAVBAR
+======================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  color: #e03c2b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+nav a {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #333;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #e03c2b;
+}
+
+.order-btn {
+  background: #e03c2b;
+  color: #fff !important;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.order-btn:hover {
+  background: #c0321f;
+  transform: scale(1.04);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #e03c2b;
+}
+
+/* MOBILE NAV */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  padding: 16px 24px;
+  gap: 14px;
+  border-bottom: 2px solid #f0e8e0;
+}
+
+.mobile-nav.open {
+  display: flex;
+}
+
+.mobile-nav a {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #333;
+}
+
+.mobile-nav .order-btn {
+  text-align: center;
+  padding: 12px;
+}
+
+/* ========================
+   HERO
+======================== */
+.hero {
+  background: linear-gradient(135deg, #e03c2b 0%, #f7a400 100%);
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  padding: 60px 40px;
+}
+
+.hero-text h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem;
+  color: #fff;
+  line-height: 1.05;
+  letter-spacing: 2px;
+}
+
+.hero-text h1 span {
+  color: #fff3d0;
+}
+
+.hero-text p {
+  color: rgba(255,255,255,0.88);
+  font-size: 1.1rem;
+  margin: 16px 0 28px;
+  font-weight: 600;
+}
+
+.hero-btn {
+  display: inline-block;
+  background: #fff;
+  color: #e03c2b;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 12px 28px;
+  border-radius: 50px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+/* ========================
+   MENU SECTION
+======================== */
+.menu-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 24px 80px;
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem;
+  text-align: center;
+  color: #1a1a1a;
+  letter-spacing: 1.5px;
+}
+
+.section-sub {
+  text-align: center;
+  color: #888;
+  font-size: 1rem;
+  margin: 6px 0 40px;
+  font-weight: 600;
+}
+
+/* ========================
+   MENU GRID + CARDS
+======================== */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: transform 0.22s, box-shadow 0.22s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  background-color: #ecdcc8;
+}
+
+.card-body {
+  padding: 18px;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.card-top h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #e03c2b;
+}
+
+.desc {
+  font-size: 0.85rem;
+  color: #777;
+  font-weight: 600;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 10px;
+  background: #f5f0eb;
+  border: 2px solid #e03c2b;
+  color: #e03c2b;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.add-btn:hover {
+  background: #e03c2b;
+  color: #fff;
+  transform: scale(1.02);
+}
+
+/* ========================
+   FOOTER
+======================== */
+footer {
+  background: #1a1a1a;
+  color: #aaa;
+  text-align: center;
+  padding: 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ========================
+   RESPONSIVE
+======================== */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero {
+    padding: 40px 24px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.8rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 14px 20px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+}

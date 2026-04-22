@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Food Shack</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      🍔 <span>The Food Shack</span>
+    </div>
+    <nav>
+      <a href="#">Menu</a>
+      <a href="#">Reviews</a>
+      <a href="#">Contact Us</a>
+      <a href="#" class="order-btn">ORDER NOW! 🛒</a>
+    </nav>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#">Menu</a>
+    <a href="#">Reviews</a>
+    <a href="#">Contact Us</a>
+    <a href="#" class="order-btn">ORDER NOW! 🛒</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Taste the<br/><span>Difference</span></h1>
+      <p>Fresh, bold flavors made with love — every single bite.</p>
+      <a href="#menu" class="hero-btn">See Our Menu ↓</a>
+    </div>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section class="menu-section" id="menu">
+    <h2 class="section-title">Our Menu</h2>
+    <p class="section-sub">Handcrafted favorites, made fresh daily</p>
+
+    <div class="menu-grid">
+
+      <div class="card">
+        <div class="card-img" style="background: url('https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400') center/cover;"></div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Taco</h3>
+            <span class="price">$9.00</span>
+          </div>
+          <p class="desc">Slow cooked pork with onions &amp; cilantro</p>
+          <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img" style="background: url('https://images.unsplash.com/photo-1561651823-34feb02250e4?w=400') center/cover;"></div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Chipotle Burrito</h3>
+            <span class="price">$14.00</span>
+          </div>
+          <p class="desc">Rice, Beans, Salsa, Guac</p>
+          <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img" style="background: url('https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400') center/cover;"></div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Pasta</h3>
+            <span class="price">$30.00</span>
+          </div>
+          <p class="desc">Classic creamy pasta with herbs and parmesan</p>
+          <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img" style="background: url('https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400') center/cover;"></div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Sandwich</h3>
+            <span class="price">$20.00</span>
+          </div>
+          <p class="desc">Grilled chicken with fresh veggies on toasted bread</p>
+          <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 The Food Shack — Made with ❤️</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('mobileNav');
+      nav.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
